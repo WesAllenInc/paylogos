@@ -36,12 +36,27 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 10,30 Q 20,20 30,30 T 50,30" stroke="%2369E8A4" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
             transform: rotate(45deg);
         }
-        .logo {
-            font-size: 28px;
-            font-weight: 300;
-            margin: 0;
+        .logo-container {
             position: relative;
             z-index: 1;
+            margin: 0 auto;
+        }
+        .logo-text {
+            font-size: 36px;
+            font-weight: 300;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #69E8A4;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            box-shadow: 0 0 20px rgba(105, 232, 164, 0.6);
         }
         .tagline {
             font-size: 14px;
@@ -280,7 +295,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="logo">ireland pay</h1>
+            <div class="logo-container">
+                <h1 class="logo-text">ireland pay<span class="logo-dot"></span></h1>
+            </div>
             <p class="tagline">Weekly Performance Update</p>
             <div class="date-badge">Week of June 28, 2025</div>
         </div>
@@ -404,7 +421,7 @@
         <div class="cta-section">
             <h3 style="margin-top: 0;">Ready to Submit More Leads?</h3>
             <p>Contact our team for product knowledge and training</p>
-            <a href="mailto:sales@irelandpay.com" class="cta-button">Get Started</a>
+            <a href="https://crm.ireland-pay.com/form/uscblead" class="cta-button">Get Started</a>
         </div>
 
         <div class="footer">

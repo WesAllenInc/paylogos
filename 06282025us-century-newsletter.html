@@ -33,12 +33,15 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         .header {
-            background: linear-gradient(135deg, #0B4F4C 0%, #15776F 100%);
+            background: linear-gradient(135deg, #0B4F4C 0%, #0B4F4C 100%);
             color: white;
-            padding: 30px 20px;
-            text-align: center;
+            padding: 15px 20px;
+            border-radius: 10px 10px 0 0;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .header::before {
             content: '';
@@ -50,22 +53,33 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 10,30 Q 20,20 30,30 T 50,30" stroke="%2369E8A4" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
             transform: rotate(45deg);
         }
-        .logo-container {
+        .logo {
             position: relative;
             z-index: 1;
+            flex: 0 0 auto;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            vertical-align: middle;
+        }
+        .employee-container {
+            width: 100%;
         }
         .tagline {
             font-size: 14px;
             opacity: 0.9;
-            margin-top: 5px;
+            margin: 0 15px;
+            flex: 1 1 auto;
+            text-align: center;
+            font-weight: 500;
         }
         .date-badge {
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
             padding: 5px 15px;
             border-radius: 20px;
-            margin-top: 10px;
             font-size: 12px;
+            flex: 0 0 auto;
         }
         .content {
             padding: 30px 20px;
@@ -134,8 +148,14 @@
         .leader-item {
             display: flex;
             align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #e9ecef;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .leader-item.centered {
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px 0;
         }
         .leader-item:last-child {
             border-bottom: none;
@@ -165,14 +185,44 @@
             color: #333;
             margin: 0;
         }
+        .leader-name.highlight {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0B4F4C;
+            text-align: center;
+            margin-top: 8px;
+            transition: transform 0.5s ease;
+        }
+        
+        @keyframes zoom-in {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.50); }
+        }
+        
+        .zoom-animation {
+            animation: zoom-in 0.8s forwards ease-out;
+            display: inline-block;
+        }
         .leader-branch {
             font-size: 12px;
             color: #666;
+            text-align: center;
+        }
+        .leader-branch.highlight {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0B4F4C;
+            background-color: rgba(105, 232, 164, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 3px;
+            border-left: 3px solid #69E8A4;
         }
         .leader-score {
             font-weight: 700;
             color: #0B4F4C;
-            font-size: 18px;
+            margin-top: 5px;
         }
         .achievement {
             background: linear-gradient(135deg, #FFD700, #FFA500);
@@ -268,6 +318,18 @@
             color: #666;
             border-top: 1px solid #e9ecef;
         }
+        .highlight-box-title {
+            margin-top: 0; 
+            color: #0B4F4C;
+        }
+        .highlight-box-text {
+            margin: 10px 0; 
+            font-size: 18px;
+        }
+        .highlight-box-amount {
+            color: #0B4F4C; 
+            font-size: 24px;
+        }
         .meeting-reminder {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
@@ -291,7 +353,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="logo">ireland pay</h1>
+            <h1 class="logo"><img src="https://raw.githubusercontent.com/WesAllenInc/paylogos/951182eb1076a24c0ceb2b42fcb744d2bbd66d94/ireland_pay_Final_white%20SMALL.png" alt="ireland pay"></h1>
             <p class="tagline">Weekly Performance Update</p>
             <div class="date-badge">Week of June 28, 2025</div>
         </div>
@@ -301,8 +363,8 @@
                 <h2 class="section-title">🚀 June 2025 Performance Highlights</h2>
                 
                 <div class="highlight-box">
-                    <h3 style="margin-top: 0; color: #0B4F4C;">Outstanding Achievement!</h3>
-                    <p style="margin: 10px 0; font-size: 18px;">Your team processed <strong style="color: #0B4F4C; font-size: 24px;">$1,407,404.56</strong> across 19 merchants this month!</p>
+                    <h3 class="highlight-box-title">Outstanding Achievement!</h3>
+                    <p class="highlight-box-text">Your team processed <strong class="highlight-box-amount">$1,407,404.56</strong> across 19 merchants this month!</p>
                 </div>
 
                 <div class="stats-grid">
@@ -329,20 +391,18 @@
                 <div class="leaderboard">
                     <h3 class="leaderboard-title">🏆 Top Performers</h3>
                     
-                    <div class="leader-item">
-                        <div class="leader-rank gold">1</div>
-                        <div class="leader-info">
-                            <p class="leader-name">Roberto Guerra</p>
+                    <div class="leader-item centered">
+                        <div class="employee-container">
                             <p class="leader-branch">Employee of the Month</p>
+                            <p class="leader-name highlight zoom-animation">ROBERTO GUERRA</p>
                         </div>
                         <div class="leader-score">2 Leads</div>
                     </div>
                     
-                    <div class="leader-item">
-                        <div class="leader-rank gold">1</div>
-                        <div class="leader-info">
-                            <p class="leader-name">MILAM DAIRY</p>
+                    <div class="leader-item centered">
+                        <div class="employee-container">
                             <p class="leader-branch">Branch of the Month</p>
+                            <p class="leader-name highlight zoom-animation">MILAM DAIRY</p>
                         </div>
                         <div class="leader-score">4 Leads</div>
                     </div>

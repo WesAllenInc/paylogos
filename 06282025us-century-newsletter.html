@@ -36,12 +36,16 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 10,30 Q 20,20 30,30 T 50,30" stroke="%2369E8A4" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
             transform: rotate(45deg);
         }
-        .logo {
-            font-size: 28px;
-            font-weight: 300;
-            margin: 0;
+        .logo-container {
             position: relative;
             z-index: 1;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+        .logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         .tagline {
             font-size: 14px;
@@ -280,8 +284,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="logo">ireland pay</h1>
-            <p class="tagline">Weekly Performance Update</p>
+            <div class="logo-container">
+            <img src="https://irelandpay.com/wp-content/uploads/2024/06/image-1.png" alt="Ireland Pay Logo" class="logo-img">
+            <div class="tagline">Weekly Payment Processing Update</div>
             <div class="date-badge">Week of June 28, 2025</div>
         </div>
 
@@ -404,7 +409,7 @@
         <div class="cta-section">
             <h3 style="margin-top: 0;">Ready to Submit More Leads?</h3>
             <p>Contact our team for product knowledge and training</p>
-            <a href="mailto:sales@irelandpay.com" class="cta-button">Get Started</a>
+            <a href="https://crm.ireland-pay.com/form/uscblead" class="cta-button">Get Started</a>
         </div>
 
         <div class="footer">

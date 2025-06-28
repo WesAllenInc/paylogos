@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ireland Pay x US Century Bank - Weekly Champions Update</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Header with animated gradient */
+        .header {
+            background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 50%, #0B4F4C 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(105, 232, 164, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .logo-container {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .header-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: -1px;
+        }
+        
+        .header-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .date-ribbon {
+            background: rgba(105, 232, 164, 0.9);
+            color: #0B4F4C;
+            padding: 8px 25px;
+            display: inline-block;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(105, 232, 164, 0.3);
+        }
+        
+        /* Hero Stats Section */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fffe 0%, #e8faf4 100%);
+            padding: 50px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .hero-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0B4F4C;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-amount {
+            font-size: 64px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0B4F4C 0%, #69E8A4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+            animation: scaleIn 0.8s ease 0.2s backwards;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* Stats Cards */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f9f9f9;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #69E8A4 0%, #0B4F4C 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .stat-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0B4F4C;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Champion Section */
+        .champions-section {
+            padding: 50px 30px;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0B4F4C;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .champions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .champion-card {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transform: scale(1);
+            animation: championPulse 2s ease infinite;
+        }
+        
+        @keyframes championPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .champion-card::before {
+            content: '🏆';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 120px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+        
+        .champion-emoji {
+            font-size: 60px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+        }
+        
+        .champion-title {
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .champion-name {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .champion-achievement {
+            font-size: 36px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+        
+        /* Branch Performance */
+        .performance-section {
+            background: #f5f5f5;
+            padding: 50px 30px;
+        }
+        
+        .branch-chart {
+            margin-top: 30px;
+        }
+        
+        .branch-item {
+            margin-bottom: 25px;
+        }
+        
+        .branch-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .branch-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .branch-count {
+            font-weight: 700;
+            color: #0B4F4C;
+            font-size: 18px;
+        }
+        
+        .branch-bar-container {
+            background: #e0e0e0;
+            height: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .branch-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #69E8A4 0%, #0B4F4C 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            transition: width 1s ease;
+            animation: slideIn 1s ease forwards;
+        }
+        
+        @keyframes slideIn {
+            from { width: 0; }
+        }
+        
+        /* New Merchant Celebration */
+        .celebration-banner {
+            background: linear-gradient(135deg, #69E8A4 0%, #0B4F4C 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            margin: 30px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .celebration-banner::before {
+            content: '🎉';
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 150px;
+            opacity: 0.1;
+        }
+        
+        .celebration-banner::after {
+            content: '🎊';
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 150px;
+            opacity: 0.1;
+        }
+        
+        .celebration-text {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .merchant-name {
+            font-size: 36px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+        
+        /* VALOR Features */
+        .valor-section {
+            background: #0B4F4C;
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+        
+        .valor-title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #69E8A4;
+        }
+        
+        .valor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .valor-item {
+            background: rgba(105, 232, 164, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #69E8A4;
+            text-align: left;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .valor-item:hover {
+            background: rgba(105, 232, 164, 0.2);
+            transform: translateX(5px);
+        }
+        
+        /* Quality Control */
+        .quality-section {
+            padding: 40px 30px;
+            background: white;
+        }
+        
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .quality-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .quality-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0B4F4C;
+            margin-bottom: 10px;
+        }
+        
+        .quality-text {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* Meeting Reminder */
+        .meeting-section {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe6a3 100%);
+            padding: 30px;
+            margin: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .meeting-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .meeting-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .meeting-details {
+            font-size: 18px;
+            color: #856404;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #f8f9fa;
+            padding: 50px 30px;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0B4F4C;
+            margin-bottom: 15px;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #69E8A4 0%, #0B4F4C 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(105, 232, 164, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(105, 232, 164, 0.5);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: #69E8A4;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-amount {
+                font-size: 48px;
+            }
+            
+            .champion-card {
+                margin-bottom: 20px;
+            }
+            
+            .valor-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/WesAllenInc/paylogos/951182eb1076a24c0ceb2b42fcb744d2bbd66d94/ireland_pay_Final_white%20SMALL.png" alt="Ireland Pay" class="logo">
+            </div>
+            <h1 class="header-title">US Century Bank Partnership</h1>
+            <p class="header-subtitle">Weekly Performance Update</p>
+            <div class="date-ribbon">Week of June 28, 2025</div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h2 class="hero-title">Outstanding Monthly Achievement!</h2>
+            <div class="hero-amount">$1,407,404.56</div>
+            <p class="hero-subtitle">Processed across 19 merchants in June 2025</p>
+        </div>
+        
+        <!-- Stats Grid -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value">16</div>
+                <div class="stat-label">Total Lead Interactions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🆕</div>
+                <div class="stat-value">10</div>
+                <div class="stat-label">New Leads Submitted</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-value">1</div>
+                <div class="stat-label">New Live Merchant</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💳</div>
+                <div class="stat-value">19</div>
+                <div class="stat-label">Active Merchants</div>
+            </div>
+        </div>
+        
+        <!-- Champions Section -->
+        <div class="champions-section">
+            <div class="section-header">
+                <h2 class="section-title">🏆 June 2025 Champions</h2>
+                <p class="section-subtitle">Celebrating our top performers!</p>
+            </div>
+            
+            <div class="champions-grid">
+                <div class="champion-card">
+                    <div class="champion-emoji">👑</div>
+                    <p class="champion-title">Employee of the Month</p>
+                    <h3 class="champion-name">ROBERTO GUERRA</h3>
+                    <p class="champion-achievement">2 LEADS</p>
+                </div>
+                
+                <div class="champion-card">
+                    <div class="champion-emoji">🌟</div>
+                    <p class="champion-title">Branch of the Month</p>
+                    <h3 class="champion-name">MILAM DAIRY</h3>
+                    <p class="champion-achievement">4 LEADS</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Merchant Celebration -->
+        <div class="celebration-banner">
+            <p class="celebration-text">Welcome to the Family!</p>
+            <h3 class="merchant-name">CAR TUNES PLUS</h3>
+            <p class="celebration-text">Now Live & Processing!</p>
+        </div>
+        
+        <!-- Branch Performance -->
+        <div class="performance-section">
+            <div class="section-header">
+                <h2 class="section-title">📈 Branch Performance Leaderboard</h2>
+                <p class="section-subtitle">Every lead counts!</p>
+            </div>
+            
+            <div class="branch-chart">
+                <div class="branch-item">
+                    <div class="branch-header">
+                        <span class="branch-name">🥇 Milam Dairy</span>
+                        <span class="branch-count">4 leads</span>
+                    </div>
+                    <div class="branch-bar-container">
+                        <div class="branch-bar" style="width: 100%;">Champion!</div>
+                    </div>
+                </div>
+                
+                <div class="branch-item">
+                    <div class="branch-header">
+                        <span class="branch-name">🥈 Coral Way</span>
+                        <span class="branch-count">3 leads</span>
+                    </div>
+                    <div class="branch-bar-container">
+                        <div class="branch-bar" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+                
+                <div class="branch-item">
+                    <div class="branch-header">
+                        <span class="branch-name">🥉 Doral HQ</span>
+                        <span class="branch-count">2 leads</span>
+                    </div>
+                    <div class="branch-bar-container">
+                        <div class="branch-bar" style="width: 50%;">50%</div>
+                    </div>
+                </div>
+                
+                <div class="branch-item">
+                    <div class="branch-header">
+                        <span class="branch-name">Other Branches Combined</span>
+                        <span class="branch-count">7 leads</span>
+                    </div>
+                    <div class="branch-bar-container">
+                        <div class="branch-bar" style="width: 40%;">Great effort!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quality Control -->
+        <div class="quality-section">
+            <div class="section-header">
+                <h2 class="section-title">✨ Quality Control Excellence</h2>
+                <p class="section-subtitle">Ensuring top-tier merchant satisfaction</p>
+            </div>
+            
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <div class="quality-number">5</div>
+                    <div class="quality-text">Branch Visits Completed</div>
+                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Bird Road • Miami Lakes • Doral • Hialeah • Coral Gables</p>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-number">15</div>
+                    <div class="quality-text">Customer Service Calls</div>
+                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Maintaining strong merchant relationships</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Meeting Reminder -->
+        <div class="meeting-section">
+            <div class="meeting-icon">📅</div>
+            <h3 class="meeting-title">Upcoming Meeting Alert!</h3>
+            <p class="meeting-details"><strong>Dadeland Branch</strong><br>July 2 @ 9:00 AM<br>with Darnell Joshua</p>
+        </div>
+        
+        <!-- VALOR Section -->
+        <div class="valor-section">
+            <h2 class="valor-title">💡 Unlock the Power of VALOR!</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Did you know VALOR can do all this?</p>
+            
+            <div class="valor-grid">
+                <div class="valor-item">✓ Accept Tips (Tip Adjust/On-Screen)</div>
+                <div class="valor-item">✓ Mobile Business Support</div>
+                <div class="valor-item">✓ Accept Fuel Cards</div>
+                <div class="valor-item">✓ Recurring/Subscription Payments</div>
+                <div class="valor-item">✓ Cash Discount/Dual Pricing</div>
+                <div class="valor-item">✓ QR Code & Pay-By-Link</div>
+                <div class="valor-item">✓ Text/Email Receipts</div>
+                <div class="valor-item">✓ Inventory Management</div>
+                <div class="valor-item">✓ Website Shopping Cart Integration</div>
+            </div>
+            
+            <p style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #69E8A4;">
+                🍕 Join our Lunch & Learn events for hands-on VALOR training!
+            </p>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Ready to Beat Roberto's Record?</h2>
+            <p class="cta-subtitle">Submit your leads and become next month's champion!</p>
+            <a href="https://crm.ireland-pay.com/form/uscblead" class="cta-button">Submit a Lead Now →</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <img src="https://raw.githubusercontent.com/WesAllenInc/paylogos/951182eb1076a24c0ceb2b42fcb744d2bbd66d94/ireland_pay_Final_white%20SMALL.png" alt="Ireland Pay" class="footer-logo">
+            <p class="footer-text">© 2025 Ireland Pay - Your Partner in Payment Solutions</p>
+            <p class="footer-text"><em>"Swipe a card, change a life"</em></p>
+            <div class="footer-links">
+                <a href="https://www.irelandpay.com">www.irelandpay.com</a>
+                <a href="mailto:support@irelandpay.com">Contact Support</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

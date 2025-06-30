@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ireland Pay x US Century Bank - Weekly Champions Update</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Added meta tags for better email client compatibility -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
     <style>
         * {
             margin: 0;
@@ -129,6 +134,138 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+        
+        /* Mobile responsive styles */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .main-container {
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 30px 15px;
+            }
+            
+            .header-title {
+                font-size: 26px;
+            }
+            
+            .header-subtitle {
+                font-size: 16px;
+            }
+            
+            .logo {
+                max-width: 150px;
+            }
+            
+            .hero-section,
+            .stats-section,
+            .champions-section,
+            .branch-section,
+            .quality-section,
+            .leads-section,
+            .meeting-section,
+            .valor-section,
+            .cta-section,
+            .footer {
+                padding: 30px 15px;
+            }
+            
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-amount {
+                font-size: 48px;
+            }
+            
+            .stats-table {
+                display: block;
+                width: 100%;
+            }
+            
+            .stats-table tr {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .stat-cell {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+            
+            .champions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .leads-table {
+                font-size: 14px;
+            }
+            
+            /* VALOR mobile styles */
+            .valor-section > div:first-child {
+                display: block !important;
+            }
+            
+            .valor-section > div:first-child > div {
+                display: block !important;
+                width: 100% !important;
+                text-align: center;
+            }
+            
+            .valor-section > div:first-child img {
+                width: 200px !important;
+                padding: 0 !important;
+                margin: 0 auto 20px !important;
+            }
+            
+            /* Additional mobile improvements */
+            .cta-button {
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+            }
+            
+            .meeting-section {
+                padding: 30px 15px;
+            }
+            
+            .meeting-title {
+                font-size: 22px;
+            }
+            
+            .footer {
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .valor-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Responsive tables */
+            .leads-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin-bottom: 20px;
             }
         }
         
@@ -680,21 +817,77 @@
         }
         
         /* Responsive */
-        @media (max-width: 768px) {
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 0;
+            }
+
+            .main-container {
+                padding: 15px;
+                border-radius: 0;
+            }
+            
+            .header {
+                padding: 15px 5px;
+            }
+            
+            .header-title {
+                font-size: 24px;
+            }
+            
+            .header-subtitle {
+                font-size: 16px;
+            }
+            
+            .logo {
+                max-width: 120px;
+            }
+            
+            .hero-section {
+                padding: 20px 10px;
+            }
+            
             .hero-amount {
-                font-size: 48px;
+                font-size: 42px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
             }
             
             .champion-card {
                 margin-bottom: 20px;
             }
             
-            .valor-grid {
-                grid-template-columns: 1fr;
+            /* Convert tables to better mobile layout */
+            .valor-grid-table td {
+                display: block;
+                width: 100% !important;
             }
             
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
+            /* Make VALOR image full width on mobile */
+            .valor-image-cell {
+                display: block;
+                width: 100% !important;
+                text-align: center;
+                padding-bottom: 15px;
+            }
+            
+            .valor-image {
+                width: 80% !important;
+                max-width: 250px !important;
+            }
+            
+            /* Make VALOR text cell full width */
+            .valor-text-cell {
+                display: block;
+                width: 100% !important;
+                text-align: center;
+            }
+            
+            /* Ensure leads table is scrollable on mobile */
+            .leads-table-wrapper {
+                overflow-x: auto;
             }
             
             .leads-table {
@@ -703,12 +896,50 @@
             
             .leads-table th,
             .leads-table td {
-                padding: 10px 8px;
+                padding: 8px 6px;
             }
             
             .status-badge {
                 font-size: 11px;
-                padding: 4px 8px;
+                padding: 4px 6px;
+            }
+            
+            /* Stats mobile layout */
+            .stats-table tr td {
+                display: block;
+                width: 100%;
+            }
+            
+            .stat-cell {
+                width: 100% !important;
+                margin-bottom: 15px;
+            }
+            
+            /* Make CTA button full width on mobile */
+            .cta-button {
+                display: block;
+                width: 100%;
+                padding: 15px 20px;
+                font-size: 18px;
+            }
+            
+            /* Adjust meeting section for mobile */
+            .meeting-section {
+                padding: 20px 10px;
+            }
+            
+            .meeting-title {
+                font-size: 22px;
+            }
+            
+            /* Center footer text on mobile */
+            .footer {
+                text-align: center;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 10px auto;
             }
         }
     </style>
@@ -895,7 +1126,8 @@
             </div>
             
             <div class="leads-table-container">
-                <table class="leads-table">
+                <div class="leads-table-wrapper" style="overflow-x: auto; width: 100%; max-width: 100%;">
+                <table class="leads-table" style="min-width: 500px;">
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -967,6 +1199,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         
@@ -979,27 +1212,41 @@
         
         <!-- VALOR Section -->
         <div class="valor-section">
-            <div style="display: table; width: 100%; margin-bottom: 20px;">
-                <div style="display: table-cell; vertical-align: middle; width: 40%;">
-                    <img src="VL550 Side.png" alt="VALOR VL550 Terminal" style="width: 300px; height: auto; padding-right: 20px;">
-                </div>
-                <div style="display: table-cell; vertical-align: middle; width: 60%;">
-                    <h2 class="valor-title">Unlock the Power of VALOR!</h2>
-                    <p style="font-size: 18px; opacity: 0.9;">Did you know VALOR can do all this?</p>
-                </div>
-            </div>
+            <!-- Using table-based layout for better email client compatibility -->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 20px;">
+                <tr>
+                    <td width="40%" style="vertical-align: middle; padding: 10px;" align="center" class="valor-image-cell">
+                        <img src="VL550 Side.png" alt="VALOR VL550 Terminal" style="width: 300px; max-width: 100%; height: auto;" class="valor-image">
+                    </td>
+                    <td width="60%" style="vertical-align: middle; padding: 10px;" class="valor-text-cell">
+                        <h2 class="valor-title" style="font-family: 'Sora', Arial, Helvetica, sans-serif; color: #0B4F4C; font-size: 28px; margin-bottom: 10px;">Unlock the Power of VALOR!</h2>
+                        <p style="font-family: 'Sora', Arial, Helvetica, sans-serif; font-size: 18px; opacity: 0.9; margin-top: 0;">Did you know VALOR can do all this?</p>
+                    </td>
+                </tr>
+            </table>
             
-            <div class="valor-grid" style="text-align: center;">
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Accept Tips (Tip Adjust/On-Screen)</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Mobile Business Support</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Accept Fuel Cards</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Recurring/Subscription Payments</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Cash Discount/Dual Pricing</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ QR Code & Pay-By-Link</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Text/Email Receipts</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Inventory Management</div>
-                <div class="valor-item" style="text-align: center; display: inline-block; width: 100%; padding-left: 0; padding-right: 0;">✓ Website Shopping Cart Integration</div>
-            </div>
+            <!-- Using table-based VALOR feature grid for email client compatibility -->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="valor-grid-table" style="margin: 0 auto;">
+                <tr>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Accept Tips (Tip Adjust/On-Screen)</td>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Mobile Business Support</td>
+                </tr>
+                <tr>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Accept Fuel Cards</td>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Recurring/Subscription Payments</td>
+                </tr>
+                <tr>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Cash Discount/Dual Pricing</td>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ QR Code & Pay-By-Link</td>
+                </tr>
+                <tr>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Text/Email Receipts</td>
+                    <td width="50%" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Inventory Management</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 10px; text-align: center; font-family: 'Sora', Arial, Helvetica, sans-serif;" class="valor-item">✓ Website Shopping Cart Integration</td>
+                </tr>
+            </table>
             
             <p style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #69E8A4; text-align: center;">
                 Join our Lunch & Learn events for hands-on VALOR training!

@@ -16,6 +16,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0;
         }
         .container {
             background-color: white;
@@ -25,15 +26,23 @@
             max-width: 500px;
             padding: 40px;
             text-align: center;
+            box-sizing: border-box;
         }
         .logo {
             max-width: 200px;
             margin-bottom: 20px;
+            height: auto;
         }
         h1 {
             color: #0B4F4C;
             margin-bottom: 30px;
             font-weight: 700;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         .input-group {
             margin-bottom: 25px;
@@ -45,6 +54,9 @@
             border-radius: 5px;
             font-family: 'Sora', Arial, Helvetica, sans-serif;
             font-size: 16px;
+            box-sizing: border-box;
+            -webkit-appearance: none; /* Removes iOS default styling */
+            appearance: none; /* Standard property for cross-browser compatibility */
         }
         button {
             background-color: #0B4F4C;
@@ -57,6 +69,9 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+            -webkit-tap-highlight-color: transparent;
+            width: auto;
+            min-width: 200px;
         }
         button:hover {
             background-color: #09403E;
@@ -65,6 +80,30 @@
             color: #cc0000;
             margin-top: 15px;
             display: none;
+            font-size: 14px;
+        }
+        
+        /* Mobile-specific adjustments */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 25px 20px;
+                margin: 0 10px;
+            }
+            .logo {
+                max-width: 150px;
+            }
+            h1 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            input {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            button {
+                width: 100%;
+                padding: 14px 20px;
+            }
         }
     </style>
 </head>

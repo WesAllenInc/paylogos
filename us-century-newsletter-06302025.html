@@ -6,7 +6,7 @@
     <title>Ireland Pay x US Century Bank - Weekly Champions Update</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Sora', Arial, Helvetica, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
             background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 100%);
@@ -83,12 +83,14 @@
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             letter-spacing: -1px;
+            font-family: 'Sora', Arial, Helvetica, sans-serif;
         }
         
         .header-subtitle {
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 200;
             opacity: 0.9;
+            font-family: 'Sora', Arial, Helvetica, sans-serif;
         }
         
         .date-ribbon {
@@ -116,6 +118,7 @@
             color: #0B4F4C;
             margin-bottom: 10px;
             animation: fadeInUp 0.8s ease;
+            font-family: 'Sora', Arial, Helvetica, sans-serif;
         }
         
         @keyframes fadeInUp {
@@ -154,44 +157,39 @@
         .hero-subtitle {
             font-size: 20px;
             color: #666;
-            font-weight: 500;
+            font-weight: 200;
+            font-family: 'Sora', Arial, Helvetica, sans-serif;
         }
         
         /* Stats Cards */
         .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 30px;
+            width: 100%;
             background: #f9f9f9;
+            padding: 30px;
+        }
+        
+        .stats-table {
+            border-collapse: separate;
+            border-spacing: 20px;
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        .stat-cell {
+            width: 50%;
+            vertical-align: top;
         }
         
         .stat-card {
             background: white;
-            padding: 25px;
             border-radius: 15px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #69E8A4 0%, #0B4F4C 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
         }
         
         .stat-card:hover::before {
@@ -735,27 +733,41 @@
         </div>
         
         <!-- Stats Grid -->
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-icon">📊</div>
-                <div class="stat-value">16</div>
-                <div class="stat-label">Total Lead Interactions</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">🆕</div>
-                <div class="stat-value">10</div>
-                <div class="stat-label">New Leads Submitted</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">✅</div>
-                <div class="stat-value">1</div>
-                <div class="stat-label">New Live Merchant</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">💳</div>
-                <div class="stat-value">19</div>
-                <div class="stat-label">Active Merchants</div>
-            </div>
+        <div class="stats-container" style="width: 100%; background: #f9f9f9; padding: 30px;">
+            <table class="stats-table" style="border-collapse: separate; border-spacing: 20px; width: 100%; table-layout: fixed;">
+                <tr>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="font-size: 40px; margin-bottom: 10px;">📊</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">16</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">Total Lead Interactions</div>
+                        </div>
+                    </td>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="font-size: 40px; margin-bottom: 10px;">🆕</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">10</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">New Leads Submitted</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="font-size: 40px; margin-bottom: 10px;">✅</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">1</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">New Live Merchant</div>
+                        </div>
+                    </td>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="font-size: 40px; margin-bottom: 10px;">💳</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">19</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">Active Merchants</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
         
         <!-- Champions Section -->

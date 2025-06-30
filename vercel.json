@@ -5,5 +5,9 @@
   "public": true,
   "github": {
     "silent": true
-  }
+  },
+  "rewrites": [
+    { "source": "/uscbnewsletter", "destination": "/" },
+    { "source": "/uscbnewsletter/(.*)", "destination": "/$1" }
+  ]
 }

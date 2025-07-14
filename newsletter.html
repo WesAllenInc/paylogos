@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!-- 
+IMPORTANT: This HTML email newsletter uses inline styles intentionally for maximum email client compatibility.
+While modern web development best practices recommend external CSS, email clients often have limited or inconsistent
+CSS support. Inline styles ensure consistent rendering across various email clients including Outlook, Gmail, 
+Yahoo Mail, and mobile email apps. This approach is standard for HTML email newsletters.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -262,9 +268,9 @@
             }
             
             /* Responsive tables */
+            /* Note: Using standard overflow properties for better cross-client compatibility */
             .leads-table-wrapper {
                 overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
                 margin-bottom: 20px;
             }
         }
@@ -977,14 +983,14 @@
                     <td class="stat-cell" style="width: 50%; vertical-align: top;">
                         <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
                             <div class="stat-icon" style="margin-bottom: 10px;"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Analytics Icon" style="width: 40px; height: 40px;"></div>
-                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">32</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">28</div>
                             <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">Total Lead Interactions</div>
                         </div>
                     </td>
                     <td class="stat-cell" style="width: 50%; vertical-align: top;">
                         <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
                             <div class="stat-icon" style="margin-bottom: 10px;"><img src="Tag-New-Square--Streamline-Plump.svg" alt="New Icon" style="width: 40px; height: 40px;"></div>
-                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">7</div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">5</div>
                             <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">New Leads Submitted</div>
                         </div>
                     </td>
@@ -1040,18 +1046,24 @@
             <p class="celebration-text">Approved & Ready to Process!</p>
         </div>
         
+        <!-- Team Effort Excellence Section -->
+        <div class="team-card" style="background: #ffffff; border-radius: 8px; padding: 20px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <h2 class="team-title" style="color: #0B4F4C; font-size: 26px; margin: 0 0 12px 0; font-weight: 700; font-family: 'Sora', Arial, Helvetica, sans-serif; text-align: center;">Team Effort Excellence!</h2>
+            <p class="team-subtitle" style="font-size: 17px; line-height: 1.5; margin: 0; color: #333; font-family: 'Sora', Arial, Helvetica, sans-serif; text-align: center;">This period showed great collaboration across all branches with multiple team members contributing equally to our success!</p>
+        </div>
+        
         <!-- Branch Performance -->
         <div class="performance-section">
             <div class="section-header">
-                <h2 class="section-title"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Chart Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 8px;"> Branch Performance Leaderboard</h2>
-                <p class="section-subtitle">Every lead counts!</p>
+                <h2 class="section-title"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Chart Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 8px;"> Branch Activity Overview</h2>
+                <p class="section-subtitle">Every branch contributed this period!</p>
             </div>
             
             <div class="branch-chart">
                 <div class="branch-item">
                     <div class="branch-header">
-                        <span class="branch-name"><img src="Number-One-Circle--Streamline-Plump.svg" alt="First Place" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> Coral Way</span>
-                        <span class="branch-count">1 Lead</span>
+                        <span class="branch-name">Milam Dairy</span>
+                        <span class="branch-count">3 interactions</span>
                     </div>
                     <div class="branch-bar-container">
                         <div class="branch-bar" style="width: 100%;">Leading</div>
@@ -1060,21 +1072,21 @@
                 
                 <div class="branch-item">
                     <div class="branch-header">
-                        <span class="branch-name"><img src="Number-Two-Circle--Streamline-Plump.svg" alt="Second Place" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> All others</span>
-                        <span class="branch-count">0 Leads</span>
+                        <span class="branch-name">Coral Way</span>
+                        <span class="branch-count">2 interactions</span>
                     </div>
                     <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;">Active</div>
+                        <div class="branch-bar" style="width: 67%;">Active</div>
                     </div>
                 </div>
                 
                 <div class="branch-item">
                     <div class="branch-header">
                         <span class="branch-name">Multiple Branches</span>
-                        <span class="branch-count">0 Leads</span>
+                        <span class="branch-count">1 interaction each</span>
                     </div>
                     <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;">Contributing</div>
+                        <div class="branch-bar" style="width: 33%;">Contributing</div>
                     </div>
                 </div>
             </div>
@@ -1089,14 +1101,14 @@
             
             <div class="quality-grid">
                 <div class="quality-card">
-                    <div class="quality-number">1</div>
-                    <div class="quality-text">Branch Visit Completed</div>
-                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Bird Road</p>
+                    <div class="quality-number">2</div>
+                    <div class="quality-text">Branch Visits Completed</div>
+                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Coral Way & Milam Dairy</p>
                 </div>
                 <div class="quality-card">
-                    <div class="quality-number">1</div>
-                    <div class="quality-text">Customer Service Call</div>
-                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Ongoing merchant support</p>
+                    <div class="quality-number">3</div>
+                    <div class="quality-text">Customer Service Calls</div>
+                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Proactive merchant support</p>
                 </div>
             </div>
         </div>
@@ -1114,11 +1126,11 @@
                     <span class="leads-stat-label">Approved</span>
                 </div>
                 <div class="leads-stat">
-                    <span class="leads-stat-number">9</span>
+                    <span class="leads-stat-number">3</span>
                     <span class="leads-stat-label">In Progress</span>
                 </div>
                 <div class="leads-stat">
-                    <span class="leads-stat-number">7</span>
+                    <span class="leads-stat-number">5</span>
                     <span class="leads-stat-label">New Leads</span>
                 </div>
             </div>
@@ -1187,27 +1199,36 @@
         <div class="meeting-section">
             <div class="meeting-icon"><img src="Mail-Newsletter-Paid-Subscription--Streamline-Plump.svg" alt="Calendar Icon" style="width: 50px; height: 50px;"></div>
             <h3 class="meeting-title">Upcoming Meeting Alert!</h3>
-            <p class="meeting-details"><strong>Tuesday, July 15, 2025</strong><br>1:00 PM<br>Darnell - Yisel</p>
+            <p class="meeting-details"><strong>Tuesday, July 22, 2025</strong><br>1:00 PM<br>Darnell - Yisel</p>
         </div>
         
-        <!-- ACH Section (replacing VALOR for this update) -->
+        <!-- ACH Section -->
         <div class="valor-section">
-            <h2 class="valor-title" style="font-family: 'Sora', Arial, Helvetica, sans-serif;"> Did You Know?</h2>
-            <p style="font-family: 'Sora', Arial, Helvetica, sans-serif; font-size: 20px; margin-bottom: 30px; opacity: 0.9;">We offer multiple ACH transaction solutions!</p>
+            <h2 class="valor-title" style="font-family: 'Sora', Arial, Helvetica, sans-serif;">ACH Solutions Spotlight</h2>
+            <p style="font-family: 'Sora', Arial, Helvetica, sans-serif; font-size: 20px; margin-bottom: 30px; opacity: 0.9;">Save time and money with our enhanced ACH services!</p>
             
             <div style="max-width: 700px; margin: 0 auto; text-align: left; background: rgba(105, 232, 164, 0.1); padding: 30px; border-radius: 15px;">
-                <h3 style="color: #69E8A4; margin-bottom: 20px; font-size: 24px;">ACH Transactions Made Easy</h3>
-                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
-                    Our ACH solutions are perfect for businesses that need to process recurring payments, payroll, vendor payments, or collect customer payments electronically.
-                </p>
+                <h3 style="color: #69E8A4; margin-bottom: 20px; font-size: 24px;">Key Benefits of ACH Processing</h3>
+                <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;">✓ Lower transaction fees than credit cards (avg. 0.5% vs 2.5%)</li>
+                    <li style="margin-bottom: 10px;">✓ Automated recurring billing capabilities</li>
+                    <li style="margin-bottom: 10px;">✓ Reduced risk of late payments</li>
+                    <li style="margin-bottom: 10px;">✓ Improved cash flow predictability</li>
+                </ul>
                 <p style="font-size: 18px; line-height: 1.8;">
-                    Ask one of our sales representatives for more information about how ACH transactions can streamline your business operations and improve cash flow!
+                    Contact your Ireland Pay representative today to set up ACH processing for your business!
                 </p>
             </div>
             
             <p style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #69E8A4; text-align: center;">
-                Don't miss our upcoming Lunch & Learn events featuring in-depth device training!
+                Join our July 25th webinar: "Maximizing ACH Efficiency for Your Business"!
             </p>
+        </div>
+        
+        <!-- Team Recognition Section -->
+        <div class="team-card" style="background: #ffffff; border-radius: 8px; padding: 20px; margin: 25px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <h2 class="team-title" style="color: #0B4F4C; font-size: 26px; margin: 0 0 12px 0; font-weight: 700; font-family: 'Sora', Arial, Helvetica, sans-serif; text-align: center;">Team Effort Excellence!</h2>
+            <p class="team-subtitle" style="font-size: 17px; line-height: 1.5; margin: 0; color: #333; font-family: 'Sora', Arial, Helvetica, sans-serif; text-align: center;">This period showed great collaboration across all branches with multiple team members contributing equally to our success!</p>
         </div>
         
         <!-- CTA Section -->

@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-IMPORTANT: This HTML email newsletter uses inline styles intentionally for maximum email client compatibility.
-While modern web development best practices recommend external CSS, email clients often have limited or inconsistent
-CSS support. Inline styles ensure consistent rendering across various email clients including Outlook, Gmail, 
-Yahoo Mail, and mobile email apps. This approach is standard for HTML email newsletters.
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,20 +21,28 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         
         body {
             font-family: 'Sora', Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #1a1a1a;
             background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
         
         .main-container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
             background: #ffffff;
-            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
         }
         
         /* Header with animated gradient */
@@ -143,257 +145,96 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             }
         }
         
-        /* Team Effort Excellence Section */
-        .team-card {
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .team-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .team-title {
-            color: #0B4F4C;
-            font-size: 26px;
-            margin: 0 0 12px 0;
-            font-weight: 700;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        
-        .team-subtitle {
-            font-size: 17px;
-            line-height: 1.5;
-            margin: 0;
-            color: #333;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        
-        /* New Merchant Celebration */
-        .celebration-banner {
-            background: linear-gradient(135deg, #0B4F4C, #1A7571);
-            border-radius: 10px;
-            padding: 25px;
-            margin: 30px 0;
-            text-align: center;
-            color: #ffffff;
-        }
-        
-        .celebration-text {
-            font-size: 18px;
-            margin: 10px 0;
-            font-weight: 200;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .merchant-name {
-            font-size: 32px;
-            margin: 15px 0;
-            font-weight: 800;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .merchant-name-secondary {
-            font-size: 28px;
-            margin: 15px 0;
-            font-weight: 800;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        /* Branch Performance */
-        .performance-section {
-            margin: 30px 0;
-        }
-        
-        .section-header {
-            margin-bottom: 20px;
-        }
-        
-        .section-title {
-            color: #0B4F4C;
-            font-size: 24px;
-            margin: 0 0 5px 0;
-            font-weight: 700;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .section-subtitle {
-            font-size: 16px;
-            margin: 0;
-            color: #666;
-            font-weight: 200;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .icon-inline {
-            width: 30px;
-            height: 30px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        
-        /* Stats Grid */
-        .stats-container {
+        /* Content sections - general styling */
+        .hero-section,
+        .stats-section,
+        .champions-section,
+        .branch-section,
+        .quality-section,
+        .leads-section,
+        .meeting-section,
+        .valor-section,
+        .cta-section,
+        .month-summary-section {
+            padding: 50px 40px;
             width: 100%;
-            background: #f9f9f9;
-            padding: 30px;
-            position: relative;
+            box-sizing: border-box;
+            margin-bottom: 0;
         }
         
-        .callout-bubble {
-            position: absolute;
-            top: 5px;
-            right: 20px;
-            background-color: #69E8A4;
-            color: #0B4F4C;
-            padding: 10px 15px;
-            border-radius: 15px;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            font-size: 14px;
-            transform: rotate(10deg);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 10;
+        /* Desktop styles */
+        @media screen and (min-width: 1201px) {
+            body {
+                padding: 30px;
+            }
+            
+            .main-container {
+                max-width: 1140px;
+                border-radius: 20px;
+                margin: 0 auto;
+            }
         }
         
-        .callout-content {
-            position: relative;
-        }
-        
-        .callout-arrow {
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 20px solid #69E8A4;
-        }
-        
-        .stats-table {
-            border-collapse: separate;
-            border-spacing: 20px;
-            width: 100%;
-            table-layout: fixed;
-        }
-        
-        .stat-cell {
-            width: 50%;
-            vertical-align: top;
-        }
-        
-        .stat-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .stat-icon {
-            margin-bottom: 10px;
-        }
-        
-        .stat-icon img {
-            width: 40px;
-            height: 40px;
-        }
-        
-        .stat-value {
-            font-size: 36px;
-            font-weight: 800;
-            color: #0B4F4C;
-            margin-bottom: 5px;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: #666;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        /* Champions Section */
-        .champion-emoji img {
-            width: 50px;
-            height: 50px;
-        }
-        
-        /* Branch Performance */
-        .branch-bar-leading {
-            width: 100%;
-        }
-        
-        .branch-bar-active {
-            width: 67%;
-        }
-        
-        /* ACH Section */
-        .valor-title {
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-        }
-        
-        .valor-subtitle {
-            font-family: 'Sora', Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .benefits-container {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: left;
-            background: rgba(105, 232, 164, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-        }
-        
-        .benefits-heading {
-            color: #69E8A4;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        
-        .benefits-list {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .benefit-item {
-            margin-bottom: 10px;
-        }
-        
-        .benefits-footer {
-            font-size: 18px;
-            line-height: 1.8;
+        /* Tablet responsive styles */
+        @media screen and (max-width: 1200px) and (min-width: 601px) {
+            body {
+                padding: 15px;
+            }
+            
+            .main-container {
+                max-width: 100%;
+            }
+            
+            .header {
+                padding: 35px 20px;
+            }
+            
+            .header-title {
+                font-size: 28px;
+            }
+            
+            .hero-amount {
+                font-size: 56px;
+            }
+            
+            .stats-table {
+                border-spacing: 15px;
+            }
+            
+            .stat-card {
+                padding: 25px;
+                margin-bottom: 15px;
+            }
+            
+            .champions-grid,
+            .branch-grid,
+            .quality-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .valor-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         /* Mobile responsive styles */
         @media screen and (max-width: 600px) {
             body {
-                padding: 10px;
+                padding: 0;
+                width: 100%;
+                overflow-x: hidden;
+                -webkit-text-size-adjust: 100%;
+                -moz-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+                line-height: 1.8;
             }
             
             .main-container {
-                border-radius: 10px;
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
             }
             
             .header {
@@ -421,8 +262,10 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             .meeting-section,
             .valor-section,
             .cta-section,
-            .footer {
-                padding: 30px 15px;
+            .footer,
+            .month-summary-section {
+                padding: 35px 20px;
+                margin-bottom: 15px;
             }
             
             .hero-title {
@@ -436,21 +279,27 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             .stats-table {
                 display: block;
                 width: 100%;
+                border-spacing: 0;
+                margin: 0;
             }
             
             .stats-table tr {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
             }
             
             .stat-cell {
                 width: 100%;
                 display: block;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
+                padding: 0 15px;
             }
             
             .champions-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 40px;
             }
             
             .branch-grid {
@@ -487,6 +336,9 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
                 width: 100%;
                 padding: 15px;
                 font-size: 18px;
+                margin: 20px auto 0;
+                display: block;
+                box-sizing: border-box;
             }
             
             .meeting-section {
@@ -508,13 +360,53 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             
             .valor-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 30px 0;
+            }
+            
+            /* Improve spacing for valor items */
+            .valor-item {
+                padding: 15px;
+                margin-bottom: 10px;
             }
             
             /* Responsive tables */
-            /* Note: Using standard overflow properties for better cross-client compatibility */
             .leads-table-wrapper {
                 overflow-x: auto;
-                margin-bottom: 20px;
+                -webkit-overflow-scrolling: touch;
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+            }
+            
+            /* Improve spacing for all text elements */
+            p, h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 15px;
+            }
+            
+            /* Improve readability of text */
+            .section-subtitle, .champion-title, .branch-name, .valor-item, .meeting-details {
+                font-size: 16px;
+                line-height: 1.7;
+                letter-spacing: 0.3px;
+            }
+            
+            /* Improve touch targets for mobile */
+            .cta-button, .valor-item, .footer-links a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            
+            /* Add more breathing room between sections */
+            .hero-section, .stats-section, .champions-section, .branch-section,
+            .quality-section, .leads-section, .meeting-section, .valor-section,
+            .cta-section, .month-summary-section {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                padding-top: 25px;
+                padding-bottom: 25px;
             }
         }
         
@@ -559,20 +451,27 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             border-spacing: 20px;
             width: 100%;
             table-layout: fixed;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
         
         .stat-cell {
             width: 50%;
             vertical-align: top;
+            padding: 0;
         }
         
         .stat-card {
             background: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px 20px;
             text-align: center;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            max-width: 100%;
             position: relative;
             overflow: hidden;
             margin-bottom: 20px;
@@ -627,14 +526,15 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         
         .champions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            width: 100%;
         }
         
         .champion-card {
-            background: linear-gradient(135deg, #0B4F4C 0%, #FFD700 100%);
-            padding: 30px;
+            background: linear-gradient(135deg, #0B4F4C 0%, #69E8A4 100%);
+            padding: 35px;
             border-radius: 20px;
             text-align: center;
             color: white;
@@ -642,6 +542,7 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             overflow: hidden;
             transform: scale(1);
             animation: championPulse 2s ease infinite;
+            margin-bottom: 10px;
         }
         
         @keyframes championPulse {
@@ -650,7 +551,7 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         }
         
         .champion-card::before {
-            content: '🏆';
+            content: 'ðŸ†';
             position: absolute;
             top: -30px;
             right: -30px;
@@ -740,6 +641,7 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             font-weight: 600;
             font-size: 14px;
             transition: width 1s ease;
+            animation: slideIn 1s ease forwards;
         }
         
         @keyframes slideIn {
@@ -759,7 +661,7 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         }
         
         .celebration-banner::before {
-            content: '🎉';
+            content: 'ðŸŽ‰';
             position: absolute;
             left: -50px;
             top: 50%;
@@ -769,7 +671,7 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         }
         
         .celebration-banner::after {
-            content: '🎊';
+            content: 'ðŸŽŠ';
             position: absolute;
             right: -50px;
             top: 50%;
@@ -808,9 +710,11 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         
         .valor-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-            margin-top: 30px;
+            margin: 30px 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .valor-item {
@@ -902,12 +806,17 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             margin-top: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .leads-table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            font-size: 16px;
+            table-layout: auto;
         }
         
         .leads-table thead {
@@ -964,6 +873,16 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             color: #856404;
         }
         
+        .status-approved {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-installed {
+            background: #c3e6cb;
+            color: #0d5524;
+        }
+        
         /* Meeting Reminder */
         .meeting-section {
             background: linear-gradient(135deg, #fff3cd 0%, #ffe6a3 100%);
@@ -993,15 +912,18 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         
         /* CTA Section */
         .cta-section {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 100%);
             padding: 50px 30px;
             text-align: center;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .cta-title {
             font-size: 32px;
             font-weight: 800;
-            color: #0B4F4C;
+            color: #69E8A4;
             margin-bottom: 15px;
         }
         
@@ -1013,15 +935,18 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #69E8A4 0%, #0B4F4C 100%);
-            color: white;
-            padding: 18px 40px;
+            background: #69E8A4;
+            color: #0B4F4C;
+            padding: 15px 40px;
             border-radius: 30px;
-            text-decoration: none;
             font-weight: 700;
             font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(105, 232, 164, 0.4);
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(105, 232, 164, 0.3);
+            max-width: 100%;
+            box-sizing: border-box;
         }
         
         .cta-button:hover {
@@ -1190,7 +1115,74 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
                 margin: 10px auto;
             }
         }
+        
+        .no-champion-card {
+            background: linear-gradient(135deg, #808080 0%, #606060 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-card {
+            background: linear-gradient(135deg, #69E8A4 0%, #0B4F4C 100%);
+            padding: 40px;
+            margin: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .team-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .team-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Month Summary Section */
+        .month-summary-section {
+            background: linear-gradient(135deg, #0B4F4C 0%, #0a3d3b 100%);
+            color: white;
+            padding: 50px 30px;
+            margin-top: 30px;
+        }
+        
+        .month-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .month-summary-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid rgba(105, 232, 164, 0.3);
+        }
+        
+        .month-summary-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #69E8A4;
+            margin-bottom: 10px;
+        }
+        
+        .month-summary-label {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
     </style>
+
 </head>
 <body>
     <div class="main-container">
@@ -1201,266 +1193,66 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
             </div>
             <h1 class="header-title">US Century Bank Partnership</h1>
             <p class="header-subtitle">Weekly Performance Update</p>
-            <div class="date-ribbon">June 30 - July 11, 2025</div>
+            <div class="date-ribbon">July 12 - July 20, 2025</div>
         </div>
         
         <!-- Hero Section -->
         <div class="hero-section">
-            <h2 class="hero-title">Outstanding Monthly Achievement!</h2>
-            <div class="hero-amount">$534,668.54</div>
-            <p class="hero-subtitle">Processed across 20 merchants this period</p>
+            <h2 class="hero-title">Exceptional Weekly Performance!</h2>
+            <div class="hero-amount">$1,117,564.23</div>
+            <p class="hero-subtitle">Processed this week across 20 merchants</p>
         </div>
         
         <!-- Stats Grid -->
-        <div class="stats-container">
-
-            <table class="stats-table">
+        <div class="stats-container" style="width: 100%; background: #f9f9f9; padding: 30px;">
+            <table class="stats-table" style="border-collapse: separate; border-spacing: 20px; width: 100%; table-layout: fixed;">
                 <tr>
-                    <td class="stat-cell">
-                        <div class="stat-card">
-                            <div class="stat-icon"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Analytics Icon"></div>
-                            <div class="stat-value">28</div>
-                            <div class="stat-label">Total Lead Interactions</div>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="margin-bottom: 10px;"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Analytics Icon" style="width: 40px; height: 40px;"></div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">8</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">Total Lead Interactions</div>
                         </div>
                     </td>
-                    <td class="stat-cell">
-                        <div class="stat-card">
-                            <div class="stat-icon"><img src="Tag-New-Square--Streamline-Plump.svg" alt="New Icon"></div>
-                            <div class="stat-value">5</div>
-                            <div class="stat-label">New Leads Submitted</div>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="margin-bottom: 10px;"><img src="Tag-New-Square--Streamline-Plump.svg" alt="New Icon" style="width: 40px; height: 40px;"></div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">4</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">New Leads This Week</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="stat-cell">
-                        <div class="stat-card">
-                            <div class="stat-icon"><img src="Number-One-Circle--Streamline-Plump.svg" alt="Number One Icon"></div>
-                            <div class="stat-value">2</div>
-                            <div class="stat-label">Approved (Pending Install)</div>
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="margin-bottom: 10px;"><img src="Number-One-Circle--Streamline-Plump.svg" alt="Number Icon" style="width: 40px; height: 40px;"></div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">5</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">In Progress</div>
                         </div>
                     </td>
-                    <td class="stat-cell">
-                        <div class="stat-card">
-                            <div class="stat-icon"><img src="Briefcase-Dollar--Streamline-Plump-Gradient.svg" alt="Check Icon"></div>
-                            <div class="stat-value">6</div>
-                            <div class="stat-label">Leads Reactivated</div>
-
+                    <td class="stat-cell" style="width: 50%; vertical-align: top;">
+                        <div class="stat-card" style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; font-family: 'Sora', Arial, Helvetica, sans-serif;">
+                            <div class="stat-icon" style="margin-bottom: 10px;"><img src="Mail-Newsletter-Paid-Subscription--Streamline-Plump.svg" alt="Merchants Icon" style="width: 40px; height: 40px;"></div>
+                            <div class="stat-value" style="font-size: 36px; font-weight: 800; color: #0B4F4C; margin-bottom: 5px; font-family: 'Sora', Arial, Helvetica, sans-serif;">20</div>
+                            <div class="stat-label" style="font-size: 14px; color: #666; font-weight: 200; text-transform: uppercase; letter-spacing: 1px; font-family: 'Sora', Arial, Helvetica, sans-serif;">Active Merchants</div>
                         </div>
                     </td>
                 </tr>
             </table>
         </div>
         
-        <!-- Champions Section -->
-        <div class="champions-section">
-            <div class="section-header">
-                <h2 class="section-title">July 2025 Champions</h2>
-                <p class="section-subtitle">Celebrating our top performers for the month!</p>
-            </div>
-            
-            <div class="champions-grid">
-                <div class="champion-card">
-                    <div class="champion-emoji"><img src="Star-Medal-1--Streamline-Plump.svg" alt="Crown Icon"></div>
-                    <p class="champion-title">Producer of the Month</p>
-                    <h3 class="champion-name">JESSICA MEDINA</h3>
-                    <p class="champion-achievement">2 LEADS!</p>
-                </div>
-                
-                <div class="champion-card">
-                    <div class="champion-emoji"><img src="Chart-Column--Streamline-Plump-Gradient.svg" alt="Briefcase Icon"></div>
-                    <p class="champion-title">Branch of the Month</p>
-                    <h3 class="champion-name">DORAL HQ</h3>
-                    <p class="champion-achievement">2 LEADS!</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- New Merchant Celebration -->
-        <div class="celebration-banner">
-            <p class="celebration-text">Welcome to the Family!</p>
-            <h3 class="merchant-name">ARMSTRONG POWER SYSTEMS</h3>
-            <h3 class="merchant-name-secondary">& TRINITY COMPREHENSIVE HEALTHCARE</h3>
-            <p class="celebration-text">Approved & Ready to Process!</p>
-        </div>
-        
-        <!-- Team Effort Excellence Section -->
+        <!-- Team Recognition -->
         <div class="team-card">
-            <h2 class="team-title">Team Effort Excellence!</h2>
-            <p class="team-subtitle">This period showed great collaboration across all branches with multiple team members contributing equally to our success!</p>
+            <h2 class="team-title">Outstanding Week Leader!</h2>
+            <p class="team-subtitle">Yisel Bello-Rodriguez led the charge with 2 new leads this week!</p>
+            <p style="font-size: 16px; margin-top: 15px; opacity: 0.8;">Also contributing: Raquel Benitez and Odalys Jimeno with 1 lead each</p>
         </div>
         
-        <!-- Branch Performance -->
-        <div class="performance-section">
-            <div class="section-header">
-                <h2 class="section-title"><img src="Ai-Network-Spark--Streamline-Plump.svg" alt="Chart Icon" class="icon-inline"> Branch Activity Overview</h2>
-                <p class="section-subtitle">Every branch that has contributed this period!</p>
-            </div>
-            
-            <div class="branch-chart">
-                <!-- Doral HQ - 2 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Doral HQ</span>
-                        <span class="branch-count">2 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 40%;">2</div>
-                    </div>
-                </div>
-                
-                <!-- DadeLand - 1 lead -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">DadeLand</span>
-                        <span class="branch-count">1 lead</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 20%;">1</div>
-                    </div>
-                </div>
-                
-                <!-- Hialeah Gardens - 1 lead -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Hialeah Gardens</span>
-                        <span class="branch-count">1 lead</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 20%;">1</div>
-                    </div>
-                </div>
-                
-                <!-- Milam Dairy - 1 lead -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Milam Dairy</span>
-                        <span class="branch-count">1 lead</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 20%;">1</div>
-                    </div>
-                </div>
-                
-                <!-- Aventura - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Aventura</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Bird Road - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Bird Road</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Coral Gables - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Coral Gables</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Coral Way - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Coral Way</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Hollywood - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Hollywood</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Miami Lakes - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Miami Lakes</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                
-                <!-- Lending Div - 0 leads -->
-                <div class="branch-item">
-                    <div class="branch-header">
-                        <span class="branch-name">Lending Div</span>
-                        <span class="branch-count">0 leads</span>
-                    </div>
-                    <div class="branch-bar-container">
-                        <div class="branch-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Quality Control -->
-        <div class="quality-section">
-            <div class="section-header">
-                <h2 class="section-title"><img src="Phone-Star--Streamline-Plump.svg" alt="Quality Star" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 8px;"> Quality Control Excellence</h2>
-                <p class="section-subtitle">Ensuring top-tier merchant satisfaction</p>
-            </div>
-            
-            <div class="quality-grid">
-                <div class="quality-card">
-                    <div class="quality-number">1</div>
-                    <div class="quality-text">Branch Visit Completed</div>
-                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Bird Rd</p>
-                </div>
-                <div class="quality-card">
-                    <div class="quality-number">1</div>
-                    <div class="quality-text">Customer Service Calls</div>
-                    <p style="font-size: 14px; color: #999; margin-top: 10px;">Proactive merchant support</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Leads Table Section -->
+        <!-- Week Leads Section -->
         <div class="leads-section">
             <div class="section-header">
-                <h2 class="section-title"><img src="Mail-Send--Streamline-Plump.svg" alt="Leads Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 8px;"> Leads Submitted</h2>
-                <p class="section-subtitle">Tracking our pipeline growth</p>
-            </div>
-            
-            <div class="leads-summary">
-                <div class="leads-stat">
-                    <span class="leads-stat-number">2</span>
-                    <span class="leads-stat-label">Approved</span>
-                </div>
-                <div class="leads-stat">
-                    <span class="leads-stat-number">7</span>
-                    <span class="leads-stat-label">In Progress</span>
-                </div>
-                <div class="leads-stat">
-                    <span class="leads-stat-number">9</span>
-                    <span class="leads-stat-label">Total Leads</span>
-                </div>
+                <h2 class="section-title"><img src="Mail-Send--Streamline-Plump.svg" alt="Leads Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 8px;"> Lead Pipeline Activity</h2>
+                <p class="section-subtitle">Monthly lead activity for July 2025</p>
             </div>
             
             <div class="leads-table-container">
@@ -1472,110 +1264,329 @@ Yahoo Mail, and mobile email apps. This approach is standard for HTML email news
                             <th>Merchant</th>
                             <th>Status</th>
                             <th>Employee</th>
+                            <th>Branch</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>7/8/25 3:34 PM</td>
-                            <td>Trinity Comprehensive Healthcare</td>
-                            <td><span class="status-badge status-approved">ACCOUNT APPROVED</span></td>
-                            <td>Sandy Dube Bell</td>
-                        </tr>
-                        <tr>
-                            <td>6/11/25 9:51 AM</td>
-                            <td>Armstrong Power Systems</td>
-                            <td><span class="status-badge status-approved">ACCOUNT APPROVED</span></td>
-                            <td>Roberto Guerra</td>
-                        </tr>
-                        <tr>
-                            <td>6/30/25 2:59 PM</td>
-                            <td>Discount Insurance</td>
-                            <td><span class="status-badge status-progress">In Progress</span></td>
-                            <td>Ana De La Osa</td>
-                        </tr>
-                        <tr>
-                            <td>7/2/25 3:23 PM</td>
+                            <td>Jul 2</td>
                             <td>The Founders Law</td>
                             <td><span class="status-badge status-progress">In Progress</span></td>
                             <td>Jessica Medina</td>
+                            <td>Miami Lakes</td>
                         </tr>
                         <tr>
-                            <td>7/9/25 5:44 PM</td>
+                            <td>Jul 2</td>
+                            <td>Trinity Comprehensive Healthcare</td>
+                            <td><span class="status-badge status-approved">Approved and Installed</span></td>
+                            <td>Sandy Dube Bell</td>
+                            <td>Dadeland</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 8</td>
                             <td>Credit Cards Collect Inc</td>
                             <td><span class="status-badge status-progress">In Progress</span></td>
                             <td>Carlos Leon</td>
+                            <td>Milam Dairy</td>
                         </tr>
                         <tr>
-                            <td>8/20/24 10:29 AM</td>
-                            <td>Rada Decoration Center</td>
-                            <td><span class="status-badge status-progress">In Progress</span></td>
-                            <td>Olga Portugues</td>
-                        </tr>
-                        <tr>
-                            <td>7/10/25 11:59 AM</td>
+                            <td>Jul 9</td>
                             <td>Kelbert University</td>
                             <td><span class="status-badge status-progress">In Progress</span></td>
                             <td>Jessica Medina</td>
+                            <td>Doral HQ</td>
                         </tr>
                         <tr>
-                            <td>7/3/25 4:49 PM</td>
-                            <td>Krustallos Pool Tiles Corp.</td>
-                            <td><span class="status-badge status-progress">In Progress</span></td>
-                            <td>Roberto Guerra</td>
+                            <td>Jul 10</td>
+                            <td>Cohen Chiropractic Center</td>
+                            <td><span class="status-badge status-new">New Lead</span></td>
+                            <td>Yisel Bello-Rodriguez</td>
+                            <td>Doral HQ</td>
                         </tr>
                         <tr>
-                            <td>6/20/25 5:37 PM</td>
-                            <td>JESUCRISTO MEDICAL GROUP LLC</td>
-                            <td><span class="status-badge status-progress">In Progress</span></td>
-                            <td>Beatriz Ramos</td>
+                            <td>Jul 14</td>
+                            <td>New Body Plastic Surgery</td>
+                            <td><span class="status-badge status-new">New Lead</span></td>
+                            <td>Raquel Benitez</td>
+                            <td>Bird Road</td>
                         </tr>
+                        <tr>
+                            <td>Jul 15</td>
+                            <td>Universal Pharmacy Discount Store</td>
+                            <td><span class="status-badge status-new">New Lead</span></td>
+                            <td>Yisel Bello-Rodriguez</td>
+                            <td>Doral HQ</td>
+                        </tr>                
                     </tbody>
                 </table>
                 </div>
             </div>
+
         </div>
         
-        <!-- Meeting Reminder -->
-        <div class="meeting-section">
-            <div class="meeting-icon"><img src="Calendar-Mark--Streamline-Plump.svg" alt="Calendar Icon" style="width: 50px; height: 50px;"></div>
-            <h3 class="meeting-title">Upcoming Meeting Alert!</h3>
-            <p class="meeting-details"><strong>Tuesday, July 22, 2025</strong><br>1:00 PM<br>Darnell - Yisel</p>
-        </div>
-        
-        <!-- ACH Section -->
-        <div class="valor-section">
-            <h2 class="valor-title">ACH Solutions Spotlight</h2>
-            <p class="valor-subtitle">Save time and money with our enhanced ACH services!</p>
+        <!-- Month-to-Date Summary -->
+        <div class="month-summary-section">
+            <div class="section-header">
+                <h2 class="section-title" style="color: #69E8A4;">July 2025 Month-to-Date Performance</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Building momentum throughout the month</p>
+            </div>
             
-            <div class="benefits-container">
-                <h3 class="benefits-heading">Key Benefits of ACH Processing</h3>
-                <ul class="benefits-list">
+            <div class="month-summary-grid">
+                <div class="month-summary-card">
+                    <div class="month-summary-number">8</div>
+                    <div class="month-summary-label">Total New Leads MTD</div>
+                </div>
+                <div class="month-summary-card">
+                    <div class="month-summary-number">4</div>
+                    <div class="month-summary-label">New Leads This Week</div>
+                </div>
+                <div class="month-summary-card">
+                    <div class="month-summary-number">19</div>
+                    <div class="month-summary-label">Total Lead Interactions MTD</div>
+                </div>
+                <div class="month-summary-card">
+                    <div class="month-summary-number">6</div>
+                    <div class="month-summary-label">Branches Contributing</div>
+                </div>
+            </div>
+            
+            <style>
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.03); }
+                    100% { transform: scale(1); }
+                }
+                .champion-card-producer {
+                    background: linear-gradient(135deg, #0B4F4C 0%, #69E8A4 100%);
+                    padding: 30px;
+                    border-radius: 15px;
+                    width: 280px;
+                    text-align: center;
+                    animation: pulse 2s infinite ease-in-out;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                }
+                .champion-card-branch {
+                    background: linear-gradient(135deg, #0B4F4C 0%, #F1C40F 100%);
+                    padding: 30px;
+                    border-radius: 15px;
+                    width: 280px;
+                    text-align: center;
+                    animation: pulse 2s infinite ease-in-out;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                }
+            </style>
+            <div style="margin-top: 40px; padding: 30px; background: #0B4F4C; border-radius: 15px; text-align: center;">
+                <h2 style="color: white; margin-bottom: 15px; font-size: 32px; font-weight: 700;">July 2025 Champions</h2>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; font-size: 18px;">Celebrating our top performers for the month!</p>
+                
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <div class="champion-card-producer">
+                        <div style="margin-bottom: 15px;">
+                            <img src="Star-Medal-1--Streamline-Plump.svg" alt="Producer Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <p style="text-transform: uppercase; color: white; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px;">PRODUCER OF THE MONTH</p>
+                        <h3 style="color: white; font-size: 24px; margin-bottom: 15px;">JESSICA MEDINA</h3>
+                        <p style="color: white; font-size: 28px; font-weight: 700;">2 LEADS!</p>
+                    </div>
                     
-                    <li class="benefit-item">✓ Automated recurring billing capabilities</li>
-                    <li class="benefit-item">✓ Reduced risk of late payments</li>
-                    <li class="benefit-item">✓ Improved cash flow predictability</li>
-                </ul>
-                <p class="benefits-footer">
-                    Contact your Ireland Pay representative today to set up ACH processing for your business!
-                </p>
+                    <div class="champion-card-branch">
+                        <div style="margin-bottom: 15px;">
+                            <img src="Chart-Column--Streamline-Plump-Gradient.svg" alt="Branch Icon" style="width: 50px; height: 50px;">
+                        </div>
+                        <p style="text-transform: uppercase; color: white; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px;">BRANCH OF THE MONTH</p>
+                        <h3 style="color: white; font-size: 24px; margin-bottom: 15px;">DORAL HQ</h3>
+                        <p style="color: white; font-size: 28px; font-weight: 700;">3 LEADS!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Branch Activity Overview -->
+        <div class="section-container" style="padding: 40px; background: #ffffff;">
+            <h2 class="section-title" style="display: flex; align-items: center; margin-bottom: 30px;">
+                <img src="Mail-Newsletter-Paid-Subscription--Streamline-Plump.svg" alt="Branch Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Branch Activity Overview
+            </h2>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Doral HQ</span>
+                    <span>3 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 75%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Bird Road</span>
+                    <span>1 lead</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 33%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Dadeland</span>
+                    <span>1 lead</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 33%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Miami Lakes</span>
+                    <span>1 lead</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 33%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Milam Dairy</span>
+                    <span>1 lead</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 33%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Coral Way</span>
+                    <span>1 lead</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 25%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Aventura</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Coral Gables</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">South Miami</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Hialeah Gardens</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Cutler Bay</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-weight: 600;">Westchester</span>
+                    <span>0 leads</span>
+                </div>
+                <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 100%; width: 0%; background: #69E8A4; border-radius: 5px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quality Control Excellence -->
+        <div class="section-container" style="padding: 40px; background: #f9f9f9;">
+            <h2 class="section-title" style="display: flex; align-items: center; margin-bottom: 30px; color: #0B4F4C;">
+                <img src="Mail-Newsletter-Paid-Subscription--Streamline-Plump.svg" alt="Quality Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Quality Control Excellence
+            </h2>
+            <p style="margin-bottom: 30px; color: #666;">Thanks to all branches for maintaining high standards!</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 18px; margin-bottom: 15px; color: #0B4F4C;">Branch QSR Compliance</h3>
+                    <div style="font-size: 36px; font-weight: 800; color: #69E8A4;">100%</div>
+                </div>
+                <div style="background: white; border-radius: 15px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 18px; margin-bottom: 15px; color: #0B4F4C;">Customer Service Calls</h3>
+                    <div style="font-size: 36px; font-weight: 800; color: #69E8A4;">0</div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <!-- Upcoming Meeting Alert -->
+        <div style="background: #ffeeb4; padding: 30px; text-align: center; margin-bottom: 40px;">
+            <img src="Mail-Newsletter-Paid-Subscription--Streamline-Plump.svg" alt="Calendar" style="width: 50px; height: 50px; margin-bottom: 15px;">
+            <h3 style="color: #333; margin-bottom: 10px;">Upcoming Meeting Alert!</h3>
+            <p style="color: #555;">Stay tuned for a meeting near you soon.</p>
+        </div>
+        
+
+        
+        <!-- VALOR Section -->
+        <div class="valor-section">
+            <h2 class="valor-title" style="font-family: 'Sora', Arial, Helvetica, sans-serif;">VALOR Product Spotlight</h2>
+            <p style="font-family: 'Sora', Arial, Helvetica, sans-serif; font-size: 20px; margin-bottom: 30px; opacity: 0.9;">Don't forget about our powerful VALOR features!</p>
+            
+            <div class="valor-grid">
+                <div class="valor-item">Accept Tips (Tip Adjust/On-Screen)</div>
+                <div class="valor-item">Mobile Business Support</div>
+                <div class="valor-item">Accept Fuel Cards</div>
+                <div class="valor-item">Recurring/Subscription Payments</div>
+                <div class="valor-item">Cash Discount/Dual Pricing</div>
+                <div class="valor-item">QR Code & Pay-By-Link</div>
+                <div class="valor-item">Text/Email Receipts</div>
+                <div class="valor-item">Inventory Management</div>
+                <div class="valor-item">Website Shopping Cart Integration</div>
             </div>
             
             <p style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #69E8A4; text-align: center;">
-               Ask us about "Maximizing ACH Efficiency for Your Business"!
+                Join our upcoming Lunch & Learn events for hands-on VALOR training!
             </p>
-        </div>
-        
-        <!-- Team Recognition Section -->
-        <div class="team-card">
-            <h2 class="team-title">We are thankful for all team members who've worked with us this month and worked leads!</h2>
-            <p class="team-subtitle"> Sandy Dube Bell, Roberto Guerra<br> Ana De La Osa, Jessica Medina<br> Carlos Leon, Olga Portugues<br> Beatriz Ramos, Yisel Bello-Rodriguez</p>
         </div>
         
         <!-- CTA Section -->
         <div class="cta-section">
-            <h2 class="cta-title">Keep the Momentum Going!</h2>
-            <p class="cta-subtitle">Every lead brings us closer to our goals!</p>
-            <a href="https://crm.ireland-pay.com/form/uscblead" class="cta-button">Submit a Lead Now →</a>
+            <h2 class="cta-title">Incredible Momentum - Let's Keep It Going!</h2>
+            <p class="cta-subtitle">We doubled our processing volume this week - your leads are making the difference!</p>
+            <a href="https://crm.ireland-pay.com/form/uscblead" class="cta-button">Submit a Lead Now</a>
         </div>
         
         <!-- Footer -->
